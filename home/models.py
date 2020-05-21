@@ -7,7 +7,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 
 # class Role(models.Model):
-#     role_name = models.CharField(max_length=50)
+# role_name = models.CharField(max_length=50)
 
 
 class UserProfile(models.Model):

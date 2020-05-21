@@ -1,0 +1,120 @@
+ {% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" type = "text/css" href="{% static 'css/base.css' %}" >
+    <link rel= "stylesheet" type = "text/cs" href = "{% static 'css/fontawesome.min.css' %}">
+    <title>Login</title>
+   
+  </head>
+  <body>
+        {% comment %} <a class=" navbar navbar-expand navbar-brand navbar-light" href="#" ><img src = "{% static 'img/home/logo.png' %}" height = "40"/></a> {% endcomment %}
+        <nav class="navbar navbar-expand navbar-light bg-light">
+            <div class="nav navbar-nav">
+                <a class="navbar-brand " href="#" ><img src = "{% static 'img/home/logo.png' %}" height = "40"/></a>
+            </div>
+        </nav> 
+
+<div class=" " id="loginModal" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header fl-pm-dk">
+        <h5 class="modal-title" id="loginModalLabel">Login and start work</h5>
+    
+      </div>
+      <div id = "loginId"class="modal-body fl-modal-cnt">
+      <!-- TODO: This is for server side, there is another version for browser defaults -->
+        <form class = "form-group " action = "">
+          <div class="form-group fl-input fl-left">
+            <i class="fa fa-envelope input-icon" aria-hidden="true"></i>
+            <input class = "form-control form-control-sm input-success fl-input-sm" type="email" class="form-control" id="user-email" placeholder = "Email" >
+          </div>
+           <div class="form-group fl-input fl-left">
+            <i class="fa fa-lock fl-left input-icon" aria-hidden="true"></i>
+            <input class = "form-control form-control-sm input-success input-sm fl-input-sm" type="password" class="form-control" name = "user-pwd" id="user-pwd"  placeholder = "Password" >
+          </div>
+          <div class="invalid-feedback">
+          The email or password you entered is incorrect
+         </div>
+          <button type="submit" class="btn btn-success btn-sm fl-btn-small fl-modal-login" >Login</button> 
+        
+        </form>
+        <a id= "forgotten" href = "#">Forgotten Password?<a/>
+          <!--- Toggle password reset   -->
+    
+    <div class = "modal-footer-forgot fl-modal-cnt">
+<form class = "form-group" action = "">
+           
+          <div class="form-group fl-input fl-left">
+            <i class="fa fa-envelope input-icon" aria-hidden="true"></i>
+            <input class = "form-control form-control-sm input-success input-sm fl-input-sm" type="email" class="form-control" id="user-email" placeholder = "Email" >
+          </div>
+          <div class="invalid-feedback">
+          The email or password you entered is incorrect
+         </div>
+          <button type="submit" class="btn btn-success btn-sm fl-btn-small fl-modal-login reset" >Reset Password</button> 
+        </form>   
+        </div>
+         
+<!-- end of reset password-->
+        </div>
+        
+      
+
+      <div class="modal-footer ">
+      <div id = "signUpId"class = "modal-footer-signup fl-modal-cnt">
+        <p>Not having an account?</p>
+        <a id = "signUpId" role="button" href = " {% url 'signup' %}" class="btn btn-secondary btn-sm fl-btn-small-dk fl-modal-login"   >Sign Up</a>
+       
+       <br>  
+       <a name="" id="google-sign" class="btn btn-secondary btn-sm fl-btn-small-dk fl-modal-login  fl-sc-dk" href="#" role="button">
+       Sign with Google <i class="fa fa-google fa-dk" style = "padding-left:1rem" aria-hidden="true"></i></a>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+    
+    <footer>    
+      <div class="fl-foot-bk2 ">
+  <div class="row ">
+    <div class="col-4">
+    <ul class="list-unstyled list-inline social text-center">
+	<li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+	<li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+	<li class="list-inline-item"><a href=""><i class="fa fa-instagram"></i></a></li>
+	<li class="list-inline-item"><a href=""><i class="fa fa-google-plus"></i></a></li>
+	<li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+	</ul></div>
+    <div class="col-8">	<p class="h6 text-light ">© All right Reversed.<a class="text-light ml-2" href="" target="_blank">freelance.com</a></p>
+</div>
+  </div>
+</div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" ></script>
+    <script src="{% static 'js/customscripts.js' %}" ></script>
+    <script src="{% static 'js/fontawesome.min.js' %}" ></script>
+
+  </body>
+</html>
+{% comment %} {% extends 'base/footer.html' %} {% endcomment %}
+
+
+
+ 
+
