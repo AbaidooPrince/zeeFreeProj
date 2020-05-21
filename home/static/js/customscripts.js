@@ -8,23 +8,18 @@ $(document).ready(
 
 
     //the following scripts are for the modals @ homepage
-    function() {
+    function(){
 
-        $("#forgotten").click(function() {
-            $(".modal-footer-forgot").show().slideDown();
-            $("#loginId").hide();
-
-
-        });
-        $("#forgotten").click(function() {
-            $("#signUpId").toggle();
-
-        });
-
-        //    $("#signUpId").click(function(){
-        //     $("#loginModal").hide();
-
-        //    });
-
-
+    $("#forgotten").click(function(){
+      $(".modal-footer-forgot").toggle().slideDown();
+      $(".modal-footer").hide();
+        
     });
+    
+   $("#signUpId").click(function(){
+    $("#loginModal").hide();
+
+   });
+
+
+  });
