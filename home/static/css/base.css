@@ -1,173 +1,272 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-
-
 /* css for content of pages */
-.content{
+
+.content {
     margin-left: 10em;
     margin-left: 10em;
     font-family: 'Open Sans', sans-serif;
-    
 }
 
-.fl-pm-dk{
+.fl-pm-dk {
     background-color: #207441;
     color: #f3f3f3;
 }
-.fl-pm-lt{
+
+.fl-pm-lt {
     background-color: #20c141;
     fill: #20c141;
 }
-.fl-pm-gr{
+
+.fl-pm-gr {
     background-color: #def0ef;
-    
 }
-.fl-sc-dk{
+
+.fl-sc-dk {
     background-color: #0f0f0f;
 }
-.fl-sc-lt{
+
+.fl-sc-lt {
     background-color: #333333;
 }
-.fl-sc-gr{
+
+.fl-sc-gr {
     background-color: #f3f3f3;
 }
 
-
-.fl-btn-small{
+.fl-btn-small {
     background-color: #207441;
     border-radius: 30px;
     padding-left: 1.5em;
     padding-right: 1.5em;
     border-width: 0em;
-    text-decoration: #f3f3f3;   
+    text-decoration: #f3f3f3;
 }
 
-.fl-btn-small:hover{
+.fl-btn-small:hover {
     background-color: #20c141;
 }
 
-.fl-btn-small:focus{
+.fl-btn-small:focus {
     background-color: #20c141;
     border-color: #207441;
     border-width: 0px;
 }
 
-
-.fl-btn-small-dk{
+.fl-btn-small-dk {
     background-color: #333333;
     border-radius: 30px;
     padding-left: 1.5em;
     padding-right: 1.5em;
     border-width: 0em;
-    text-decoration: #f3f3f3;   
+    text-decoration: #f3f3f3;
 }
 
-.fl-btn-small-dk:hover{
+.fl-btn-small-dk:hover {
     background-color: #0f0f0f;
 }
 
-.fl-btn-small-dk:focus{
-    background-color:#0f0f0f;
-    border-color:#333333;
+.fl-btn-small-dk:focus {
+    background-color: #0f0f0f;
+    border-color: #333333;
     border-width: 0px;
 }
 
-.fl-nav-items{
+.btn-group-toggle {
+    /* color: #f3f3f3; */
+    width: 18rem;
+    text-decoration: #333333;
+}
+
+
+/* ------------------------------------- */
+
+
+/* 
+.radio-toolbar {
+    margin: 10px;
+} */
+
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #f3f3f3;
+    text-decoration: #0f0f0f;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    /* padding: 10px 20px; */
+    border-radius: 30px;
+}
+
+.radio-toolbar label:hover {
+    background-color: #207441;
+}
+
+.radio-toolbar input[type="radio"]:focus+label {
+    border: 0.1rem;
+    border-style: solid;
+    border-color: #20c141;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #207441;
+    text-decoration: #f3f3f3;
+}
+
+
+/* .fl-btn-radio label:focus {
+    background-color: #207441;
+    text-decoration: #f3f3f3;
+} */
+
+
+/* .radio-toolbar input[type="radio"]:checked+label {
+    background-color: #bfb;
+    border-color: #4c4;
+} */
+
+.fl-nav-items {
     /* float: right; */
     align-content: flex-end;
 }
-.fl-nav-right-pad{
+
+.fl-nav-right-pad {
     padding-right: 15em;
 }
 
-.fl-nav-light{
+.fl-nav-light {
     background-color: #def0ef;
 }
 
 
 /* footer */
 
-.fl-foot-bk1{
+.fl-foot-bk1 {
     background-color: #333333;
     padding-top: 1rem;
     color: #f3f3f3;
     padding-left: 2rem;
 }
-.fl-foot-bk2{
+
+.fl-foot-bk2 {
     background-color: #0f0f0f;
     padding-top: 1rem;
 }
-.footer-first-col{
-   margin-top: 2rem;
+
+.footer-first-col {
+    margin-top: 2rem;
 }
 
+
 /* icons */
-.fa{
+
+.fa {
     color: #207441;
 }
-.fa:hover{
+
+.fa:hover {
     color: #20c141;
 }
-.fa-dk{
+
+.fa-dk {
     color: #def0ef;
 }
-.fa-dk:hover{
+
+.fa-dk:hover {
     color: #20c141;
 }
+
+
 /* ------modal elements ----- */
-.fl-modal-login{
+
+.fl-modal-login {
     padding-left: 3em;
     padding-right: 3em;
     width: 18rem;
 }
+
 .fl-modal-cnt {
     margin-left: auto;
     margin-right: auto;
 }
-.modal-footer-forgot{
+
+.modal-footer-forgot {
     margin-top: 2rem;
     display: none;
 }
-.modal-footer{
+
+.modal-footer {
     padding-bottom: 1.5rem;
 }
-.modal-header{
+
+.modal-header {
     margin-bottom: 1rem;
 }
 
 .fl-input-sm {
     border-radius: 2rem;
     width: 18rem;
-} 
-#google-sign {
-    margin-top: 2rem;
 }
 
+.fl-input-xs {
+    border-radius: 2rem;
+    width: 9rem;
+}
 
+#google-sign {
+    margin-top: 1rem;
+}
+
+#signUpId {
+    visibility: visible;
+}
+
+.country {
+    padding: 0.5em;
+    text-align: center;
+}
 
 
 /* ------------------ */
 
-.fl-input { 
-    position: relative; 
+.fl-input {
+    position: relative;
     text-align: left;
-    
 }
+
 
 /* style icon */
-.fl-input .input-icon{
-  position: absolute;
-  padding: 10px;
-  padding-left: 1em;
-  pointer-events: none;
+
+.fl-input .input-icon {
+    position: absolute;
+    padding: 7px;
+    padding-left: 1em;
+    /* pointer-events: none; */
 }
 
+
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
 
 /* add padding  */
-.fl-left input { padding-left:  3rem; }
-.fl-right input { padding-right: 1rem; }
 
+.fl-left input {
+    padding-left: 3rem;
+}
 
+.fl-right input {
+    padding-right: 1rem;
+}

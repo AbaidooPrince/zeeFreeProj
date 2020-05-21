@@ -6,6 +6,7 @@ from .forms import *
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
+# Create your views here.
 
 # @login_required(login_url='login')
 class HomePageView(TemplateView):
@@ -22,7 +23,7 @@ def registerPage(request):
             user = form.cleaned_data.get('username')
             messages.success(request, 'account was created for ' + user)
             return redirect('login')
-            
+
     context = {'form': form}
     return render(request, 'base/register.html', context)
 
