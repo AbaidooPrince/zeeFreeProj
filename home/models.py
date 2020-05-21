@@ -4,15 +4,14 @@ from django.db import models
 
 # from phone_field import PhoneField
 from phonenumber_field.modelfields import PhoneNumberField
-
+from django.contrib.auth.models import User
 
 # class Role(models.Model):
 #     role_name = models.CharField(max_length=50)
 
 
 class UserProfile(models.Model):
-    firstname = models.CharField(max_length=50)
-    lastname = models.CharField(max_length=50)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.CharField(max_length=50)
     phone = PhoneNumberField(blank=True)
     location = models.CharField(max_length=50)
@@ -22,14 +21,8 @@ class UserProfile(models.Model):
     # role_id = models.ForeignKey(Role, on_delete=models.CASCADE)
 
 
-class UserAccount(models.Model):
-    username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    status = models.CharField(max_length=10)
-    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-
-
 class Job(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=255)
     budget = models.CharField(max_length=20)
@@ -47,19 +40,19 @@ class Certificate(models.Model):
     provider = models.CharField(max_length=50)
     date_earned = models.DateField(auto_now=False, auto_now_add=False)
     updated_date = models.DateField(auto_now=False, auto_now_add=False)
-    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class FreelancerSkill(models.Model):
     created_date = models.DateField(auto_now=False, auto_now_add=False)
     updated_date = models.DateField(auto_now=False, auto_now_add=False)
-    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class FreelancerPayment(models.Model):
     amount = models.CharField(max_length=20)
     payment_date = models.DateField(auto_now=False, auto_now_add=False)
-    payment_to = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    payment_to = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class ClientPayment(models.Model):
@@ -71,13 +64,13 @@ class ClientPayment(models.Model):
 class LoggingInfo(models.Model):
     activity = models.TextField(max_length=255)
     date = models.DateField(auto_now=False, auto_now_add=False)
-    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class JobProposal(models.Model):
     freelancer_comment = models.TextField(max_length=255)
     job_id = models.ForeignKey(Job, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Skill(models.Model):
